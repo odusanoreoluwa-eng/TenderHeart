@@ -1,0 +1,45 @@
+/* assets/css/variables.css */
+:root {
+  /* Brand colors */
+  --color-orange: #eeae4f;
+  --color-cream: #edeecc;
+  --color-teal: #9ecec9;
+  --color-olive: #87a651;
+  --color-blue: #3b9fc1;
+
+  /* Neutrals */
+  --color-white: #ffffff;
+  --color-text: #2e2e2e;
+  --color-text-muted: #6b6b6b;
+  --color-border: #e7e4d8;
+
+  /* Typography */
+  /* variables.css — update font stacks for safer fallback chain */
+  --font-primary: "Poppins", Georgia, serif;
+  --font-secondary:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  /* Shadow */
+  --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* Layout */
+  --container-max: 1200px;
+  --header-height: 76px;
+
+  /* Motion */
+  --transition-fast: 0.2s ease;
+}

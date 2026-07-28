@@ -1,0 +1,754 @@
+<!-- about.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Tender Heart Care Solution</title>
+    <meta
+      name="description"
+      content="Learn about Tender Heart Care Solution — our story, mission, values, and approach to compassionate elder care across Nigeria."
+    />
+
+    <meta property="og:title" content="About Us | Tender Heart Care Solution" />
+    <meta
+      property="og:description"
+      content="Our story, mission, values, and approach to compassionate elder care."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/hero/og-cover.jpg" />
+    <meta
+      property="og:url"
+      content="https://www.tendercaresolution.com/about.html"
+    />
+
+    <link rel="icon" href="assets/images/logo/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ============ HEADER (reused exactly, "About" now active) ============ -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a
+          href="index.html"
+          class="logo"
+          aria-label="Tender Heart Care Solution — Home"
+        >
+          <img
+            src="assets/images/logo/logo.png"
+            alt=""
+            class="logo__icon"
+            width="40"
+            height="40"
+          />
+          <span class="logo__text">
+            Tender Heart
+            <small>Care Solution</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" id="main-nav" aria-label="Primary">
+          <ul class="main-nav__list" id="main-nav-list">
+            <li><a href="index.html" class="main-nav__link">Home</a></li>
+            <li>
+              <a
+                href="about.html"
+                class="main-nav__link is-active"
+                aria-current="page"
+                >About</a
+              >
+            </li>
+            <li><a href="services.html" class="main-nav__link">Services</a></li>
+            <li><a href="contact.html" class="main-nav__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="tel:+2348100011888" class="header-actions__phone">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+            <span class="header-actions__phone-text">
+              <small>Call Anytime</small>
+              +234 810 001 1888
+            </span>
+          </a>
+
+          <a href="contact.html" class="btn btn--primary">Book Consultation</a>
+
+          <button
+            type="button"
+            class="nav-toggle"
+            id="navToggle"
+            aria-expanded="false"
+            aria-controls="main-nav-list"
+            aria-label="Open menu"
+          >
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ============ SECTION 1: BREADCRUMB + ABOUT HERO ============ -->
+      <section
+        class="page-hero page-hero--olive"
+        aria-labelledby="page-hero-heading"
+      >
+        <div class="container">
+          <nav class="breadcrumb breadcrumb--on-dark" aria-label="Breadcrumb">
+            <ol class="breadcrumb__list">
+              <li><a href="index.html">Home</a></li>
+              <li aria-current="page">About</li>
+            </ol>
+          </nav>
+
+          <div class="page-hero__inner">
+            <div class="page-hero__content">
+              <h1 id="page-hero-heading" class="page-hero__title">
+                About Tender Heart
+              </h1>
+              <p class="page-hero__desc">
+                We are particularly proud of our specialized expertise in
+                dementia care and palliative support, areas where we provide
+                enhanced compassion and professional understanding. Beyond our
+                robust in-home services, we also operate our own dedicated care
+                facility.
+              </p>
+            </div>
+
+            <div class="page-hero__media">
+              <img
+                src="assets/images/about/about-hero.png"
+                alt="A Tender Heart caregiver sharing a warm moment with an elderly client"
+                width="600"
+                height="440"
+                loading="eager"
+                fetchpriority="high"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="service-detail"
+        id="our-story"
+        aria-labelledby="our-story-heading"
+      >
+        <div class="container service-detail__inner">
+          <div class="service-detail__media">
+            <img
+              src="assets/images/about/our-story.png"
+              alt="A Tender Heart caregiver and client sharing a warm conversation at home"
+              width="480"
+              height="420"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="service-detail__content">
+            <h2 id="our-story-heading" class="service-detail__title">
+              Our Story
+            </h2>
+            <p class="service-detail__desc">
+              Established over 10 years ago, Tender Heart Care Solution has
+              grown into a trusted name in elder care across Nigeria. Our
+              extensive experience has equipped us with a deep understanding of
+              the intricacies of aged care, allowing us to develop comprehensive
+              and flexible care plans tailored to each individual's specific
+              requirements.
+            </p>
+
+            <div class="info-grid">
+              <div class="info-card">
+                <p class="info-card__desc">
+                  Tender Heart was created to address a simple need: elder care
+                  that feels human—consistent, respectful, and truly supportive.
+                  We believe families deserve peace of mind and elders deserve
+                  dignity in every interaction.
+                </p>
+                <ul class="tag-list">
+                  <li class="tag">Human-centered care</li>
+                  <li class="tag">Family-first support</li>
+                </ul>
+              </div>
+
+              <div class="info-card">
+                <p class="info-card__desc">
+                  We provide reliable, compassionate care, allowing families to
+                  rest assured their loved ones are in good hands.
+                </p>
+                <ul class="tag-list">
+                  <li class="tag">Respect &amp; dignity</li>
+                  <li class="tag">Peace of Mind for Families</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="values" aria-labelledby="values-heading">
+        <div class="container">
+          <div class="section-intro">
+            <h2 id="values-heading" class="section-intro__title">
+              Mission • Vision • Values
+            </h2>
+            <p class="section-intro__desc">
+              Clear principles that guide how we show up each day.
+            </p>
+          </div>
+
+          <ul class="value-grid value-grid--cols-3">
+            <li class="value-card" data-animate="float-in">
+              <span class="value-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="12" cy="12" r="0.5" fill="currentColor" />
+                </svg>
+              </span>
+              <h3 class="value-card__title">Mission</h3>
+              <p class="value-card__eyebrow">Purpose in action</p>
+              <p class="value-card__desc">
+                Deliver compassionate, consistent elder care that supports
+                dignity, comfort, and family peace of mind.
+              </p>
+            </li>
+
+            <li class="value-card" data-animate="float-in">
+              <span class="value-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"
+                  />
+                  <circle cx="12" cy="12" r="4" />
+                </svg>
+              </span>
+              <h3 class="value-card__title">Vision</h3>
+              <p class="value-card__eyebrow">Where we're headed</p>
+              <p class="value-card__desc">
+                A future where every senior receives respectful, personalized
+                care delivered with expertise and genuine kindness.
+              </p>
+            </li>
+
+            <li class="value-card" data-animate="float-in">
+              <span class="value-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21l7.78-7.55 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  />
+                </svg>
+              </span>
+              <h3 class="value-card__title">Values</h3>
+              <p class="value-card__eyebrow">How we care</p>
+              <p class="value-card__desc">
+                Compassion, Respect, Professionalism, Integrity, and
+                Dignity—every visit, every time.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="approach" aria-labelledby="approach-heading">
+        <div class="container">
+          <div class="section-intro">
+            <h2 id="approach-heading" class="section-intro__title">
+              Our Approach to Care
+            </h2>
+            <p class="section-intro__desc">
+              Intentional care designed around the person—not just the tasks.
+            </p>
+          </div>
+
+          <ul class="value-grid value-grid--cols-3">
+            <li class="value-card" data-animate="float-in">
+              <span class="value-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M14 3h7v7h-7zM3 14h7v7H3zM3 3h7v7H3zM14 14h3v3h-3zM20 14h.01M14 20h.01M17 17h.01"
+                  />
+                </svg>
+              </span>
+              <h3 class="value-card__title">Person-Centred Care</h3>
+              <p class="value-card__eyebrow">Care plans that match real life</p>
+              <p class="value-card__desc">
+                We tailor support to preferences, routines, and health needs—so
+                care feels natural and effective.
+              </p>
+            </li>
+
+            <li class="value-card" data-animate="float-in">
+              <span class="value-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M8 3a2 2 0 0 0-2 2v2a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V5a2 2 0 0 0-2-2"
+                  />
+                  <path d="M9 15v2a3 3 0 0 0 6 0v-2" />
+                  <path d="M12 15v6" />
+                </svg>
+              </span>
+              <h3 class="value-card__title">Qualified Caregivers</h3>
+              <p class="value-card__eyebrow">Experience with empathy</p>
+              <p class="value-card__desc">
+                Professionally trained staff deliver thoughtful assistance with
+                confidence and compassion.
+              </p>
+            </li>
+
+            <li class="value-card" data-animate="float-in">
+              <span class="value-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                  />
+                </svg>
+              </span>
+              <h3 class="value-card__title">Communication</h3>
+              <p class="value-card__eyebrow">Clear updates for families</p>
+              <p class="value-card__desc">
+                We keep families informed with respectful, consistent
+                communication and quick escalation when needed.
+              </p>
+            </li>
+
+            <li class="value-card" data-animate="float-in">
+              <span class="value-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 20v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </span>
+              <h3 class="value-card__title">Collaboration</h3>
+              <p class="value-card__eyebrow">Aligned with your care team</p>
+              <p class="value-card__desc">
+                We work alongside families and healthcare partners to maintain
+                continuity and safety.
+              </p>
+            </li>
+
+            <li class="value-card" data-animate="float-in">
+              <span class="value-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+              </span>
+              <h3 class="value-card__title">Respect</h3>
+              <p class="value-card__eyebrow">Dignity in every detail</p>
+              <p class="value-card__desc">
+                We honor privacy, independence, and personal choices—because
+                dignity matters.
+              </p>
+            </li>
+
+            <li class="value-card" data-animate="float-in">
+              <span class="value-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4z"
+                  />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </span>
+              <h3 class="value-card__title">Reliability</h3>
+              <p class="value-card__eyebrow">Consistency you can count on</p>
+              <p class="value-card__desc">
+                Dependable scheduling and steady support help families feel
+                secure and supported.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        class="credentials"
+        id="why-choose-us"
+        aria-labelledby="credentials-heading"
+      >
+        <div class="container">
+          <div class="section-intro">
+            <p class="section-intro__eyebrow">Track Record</p>
+            <h2 id="credentials-heading" class="section-intro__title">
+              Experience &amp; Community Commitment
+            </h2>
+            <p class="section-intro__desc">
+              A decade of steady, accountable care—built on training,
+              consistency, and a genuine commitment to the families we serve.
+            </p>
+          </div>
+
+          <ul class="stat-grid">
+            <li class="stat-card" data-animate="float-in">
+              <p class="stat-card__number">10+</p>
+              <p class="stat-card__label">Years of compassionate care</p>
+            </li>
+            <li class="stat-card" data-animate="float-in">
+              <p class="stat-card__number">5</p>
+              <p class="stat-card__label">States served across Nigeria</p>
+            </li>
+            <li class="stat-card" data-animate="float-in">
+              <p class="stat-card__number">24/7</p>
+              <p class="stat-card__label">Support availability</p>
+            </li>
+            <li class="stat-card" data-animate="float-in">
+              <p class="stat-card__number">100%</p>
+              <p class="stat-card__label">
+                Vetted &amp; background-checked caregivers
+              </p>
+            </li>
+          </ul>
+
+          <div class="info-grid">
+            <div class="info-card" data-animate="float-in">
+              <h3 class="info-card__title">Professional Standards</h3>
+              <p class="info-card__desc">
+                Our caregivers are trained, supervised, and held to consistent
+                standards of practice, so every family receives the same level
+                of care and accountability.
+              </p>
+              <ul class="tag-list">
+                <li class="tag">Ongoing training</li>
+                <li class="tag">Supervised care</li>
+              </ul>
+            </div>
+
+            <div class="info-card" data-animate="float-in">
+              <h3 class="info-card__title">Community Commitment</h3>
+              <p class="info-card__desc">
+                We're proud to be part of the communities we serve, working to
+                make quality elder care more accessible to families across
+                Nigeria.
+              </p>
+              <ul class="tag-list">
+                <li class="tag">Locally rooted</li>
+                <li class="tag">Accessible care</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="cta-band-heading">
+        <div class="container cta-band__inner">
+          <div class="cta-band__text">
+            <p class="cta-band__eyebrow">Tender Heart</p>
+            <h2 id="cta-band-heading" class="cta-band__title">
+              Ready to Talk About Your Loved One's Care?
+            </h2>
+            <p class="cta-band__desc">
+              We'd love to understand your family's needs.
+            </p>
+          </div>
+
+          <div class="cta-band__actions">
+            <a
+              href="https://wa.me/2348100011888"
+              class="btn btn--outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.26-8.24 2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.42 5.83c0 4.55-3.7 8.24-8.26 8.24zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.24-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.24.25-.4.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.43.06-.66.31s-.87.85-.87 2.08.89 2.41 1.02 2.58c.12.17 1.75 2.68 4.25 3.75.59.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.28z"
+                />
+              </svg>
+              WhatsApp
+            </a>
+            <a href="contact.html" class="btn btn--primary"
+              >Book Consultation</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER (reused exactly from index.html / services.html) ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <a
+              href="index.html"
+              class="logo logo--footer"
+              aria-label="Tender Heart Care Solution — Home"
+            >
+              <img
+                src="assets/images/logo/logo.png"
+                alt=""
+                class="logo__icon"
+                width="40"
+                height="40"
+              />
+              <span class="logo__text">
+                Tender Heart
+                <small>Care Solution</small>
+              </span>
+            </a>
+            <p class="site-footer__desc">
+              Professional, compassionate, and personalized care services that
+              support independence, dignity, and a better quality of life.
+            </p>
+            <ul class="site-footer__socials" aria-label="Social media">
+              <li>
+                <a href="#" aria-label="Facebook">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Instagram">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="X (Twitter)">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M18.9 2H22l-7.6 8.7L23 22h-6.8l-5.3-6.9L4.8 22H2l8.1-9.3L1.5 2h7l4.8 6.3zM17.6 20h1.9L6.5 4H4.5z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <nav class="site-footer__col" aria-labelledby="footer-quick-links">
+            <h3 id="footer-quick-links" class="site-footer__heading">
+              Quick Links
+            </h3>
+            <ul class="site-footer__list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html" aria-current="page">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li>
+                <a href="about.html#why-choose-us">Why Families Trust Us</a>
+              </li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+
+          <nav class="site-footer__col" aria-labelledby="footer-services">
+            <h3 id="footer-services" class="site-footer__heading">
+              Our Services
+            </h3>
+            <ul class="site-footer__list">
+              <li><a href="services.html#in-home-care">In-Home Care</a></li>
+              <li>
+                <a href="services.html#care-home-support">Care Home Support</a>
+              </li>
+              <li><a href="services.html#dementia-care">Dementia</a></li>
+              <li>
+                <a href="services.html#palliative-care">Palliative Care</a>
+              </li>
+              <li><a href="services.html#respite-care">Respite Care</a></li>
+              <li><a href="services.html#companionship">Companionship</a></li>
+              <li>
+                <a href="services.html#medication-management"
+                  >Medication Management</a
+                >
+              </li>
+              <li>
+                <a href="services.html#meal-preparation">Meal Preparation</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="site-footer__col">
+            <h3 class="site-footer__heading">Contact Us</h3>
+            <ul class="site-footer__contact">
+              <li>
+                <svg
+                  class="site-footer__contact-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span
+                  >12, Companion Way, Lekki Phase 1, Lagos State, Nigeria</span
+                >
+              </li>
+              <li>
+                <svg
+                  class="site-footer__contact-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <span>
+                  <a href="tel:+2348134567890">+234 813 456 7890</a><br />
+                  <a href="tel:+2347017489980">+234 701 748 9980</a>
+                </span>
+              </li>
+              <li>
+                <svg
+                  class="site-footer__contact-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m2 7 10 6 10-6" />
+                </svg>
+                <span>
+                  <a href="mailto:info@tendercaresolution.com"
+                    >info@tendercaresolution.com</a
+                  ><br />
+                  <a href="mailto:care@tendercaresolution.com"
+                    >care@tendercaresolution.com</a
+                  >
+                </span>
+              </li>
+              <li>
+                <svg
+                  class="site-footer__contact-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 3" />
+                </svg>
+                <span>
+                  Mon – Fri: 8:00 AM – 6:00 PM<br />
+                  Sat: 9:00 AM – 2:00 PM
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p class="site-footer__copyright">
+            &copy; 2026 Tender Heart Care Solution. All rights reserved.
+          </p>
+          <ul class="site-footer__legal">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/navigation.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
