@@ -224,7 +224,7 @@ h4 {
 }
 
 .header-actions__phone {
-  display: none; /* revealed on tablet+ in responsive.css */
+  display: none;
   align-items: center;
   gap: var(--space-xs);
   color: var(--color-text);
@@ -252,8 +252,6 @@ h4 {
   letter-spacing: 0.04em;
 }
 
-/* assets/css/style.css — append below the header styles */
-
 /* ---------- Utility ---------- */
 .visually-hidden {
   position: absolute;
@@ -271,14 +269,12 @@ h4 {
   color: var(--color-orange);
 }
 
-/* ---------- Card (reusable base component) ---------- */
 .card {
   background-color: var(--color-white);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
 }
 
-/* ---------- Button variants (extends .btn from header) ---------- */
 .btn--outline {
   background-color: var(--color-white);
   color: var(--color-text);
@@ -302,9 +298,6 @@ h4 {
   /* background-color: #f9faf6; */
 }
 
-/* Top region: image + content only. This is the ONLY positioning
-   context for .hero__media — the feature strip lives outside it
-   entirely, so it can never overlap or "mix in". */
 .hero__top {
   position: relative;
   overflow: hidden;
@@ -316,10 +309,9 @@ h4 {
   object-fit: cover;
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
-/* assets/css/style.css — update .hero__media and .hero__badge */
 
 .hero__media {
-  position: relative; /* anchors the badge to the image itself, not .hero__top */
+  position: relative;
 }
 
 @keyframes badgeFloat {
@@ -407,9 +399,6 @@ h4 {
   gap: var(--space-sm);
 }
 
-/* ---------- Feature strip ---------- */
-/* Lives in NORMAL document flow below .hero__top — no position rules
-   needed, so it can never be caught inside the image's overlay. */
 .feature-strip {
   display: grid;
   grid-template-columns: 1fr;
@@ -467,12 +456,10 @@ h4 {
   margin: 0.15rem 0 0;
 }
 
-/* assets/css/style.css — append below the Feature strip block */
-
 /* ---------- Emotive section ---------- */
 .emotive {
   position: relative;
-  isolation: isolate; /* keeps stacking context self-contained */
+  isolation: isolate;
   background-color: var(--color-cream);
 }
 
@@ -523,12 +510,6 @@ h4 {
   max-width: 46ch;
 }
 
-/* .emotive uses .btn .btn--primary from the shared component —
-   no new button styles needed */
-
-/* ---------- Section intro (reusable across sections) ---------- */
-/* assets/css/style.css — full Services section */
-
 /* ---------- Section intro (reusable across sections) ---------- */
 .section-intro {
   text-align: center;
@@ -560,7 +541,7 @@ h4 {
 .services {
   padding-block: var(--space-xl);
   margin-top: var(--space-lg);
-  background-color: #ffffff; /* light cream background, not pure white me changes*/
+  background-color: #ffffff;
 }
 
 .service-grid {
@@ -569,14 +550,10 @@ h4 {
   gap: var(--space-md);
 }
 
-/* Per-card accent colors — read by everything below */
-/* assets/css/style.css — add one new custom property per accent block,
-   right alongside the existing --card-accent / --card-accent-strong */
-
 .service-card--teal {
   --card-accent: var(--color-teal);
   --card-accent-strong: #4f8f89;
-  --card-tint-strong: #e4f3f1; /* solid, light teal-tinted background for hover */
+  --card-tint-strong: #e4f3f1;
 }
 .service-card--blue {
   --card-accent: var(--color-blue);
@@ -594,14 +571,12 @@ h4 {
   --card-tint-strong: #eef3e5;
 }
 
-/* Card shell — owns its own radius/shadow, no white box underneath.
-   Sizes itself to .service-card__content since .service-card__media
-   is position:absolute and out of normal flow. */
 .service-card {
   position: relative;
   isolation: isolate;
   padding: 0;
   overflow: hidden;
+  min-width: 0;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
   display: flex;
@@ -624,7 +599,7 @@ h4 {
   position: absolute;
   inset: 0;
   z-index: 0;
-  --media-opacity: 0.8; /* faint/textural resting state, not a full photo */
+  --media-opacity: 0.4;
 }
 .service-card__media img {
   width: 100%;
@@ -632,6 +607,8 @@ h4 {
   object-fit: cover;
   object-position: center;
   opacity: var(--media-opacity, 1);
+  filter: blur(6px);
+  transform: scale(1.08);
   transition: opacity var(--transition-fast);
 }
 .service-card:hover .service-card__media img {
@@ -655,6 +632,7 @@ h4 {
   position: relative;
   z-index: 1;
   width: calc(100% - (var(--space-md) * 2));
+  min-width: 0;
   margin: var(--space-md);
   padding: var(--space-md);
   border-radius: var(--radius-lg);
@@ -672,13 +650,6 @@ h4 {
     border-color 0.25s ease;
 }
 
-/* assets/css/style.css — add these hover overrides, placed right after
-   the existing .service-card:hover .service-card__content rule */
-
-/* On hover: panel becomes more opaque and takes on the card's own
-   accent tint (not just white), and all text switches to a dark,
-   high-contrast color instead of white — this is what actually
-   fixes the legibility problem, not just brightening the glass. */
 .service-card:hover .service-card__content {
   background-color: var(--card-tint-strong);
   border-color: var(--card-accent);
@@ -690,15 +661,13 @@ h4 {
 .service-card:hover .service-card__feature-desc,
 .service-card:hover .service-card__link {
   color: var(--color-text);
-  text-shadow: none; /* no longer needed on a solid, opaque background */
+  text-shadow: none;
 }
 
 .service-card:hover .service-card__link svg {
   color: var(--card-accent-strong);
 }
 
-/* Badge and feature icons get a stronger, more saturated tint on
-   hover too, instead of the flat white pill they use at rest */
 .service-card:hover .service-card__badge {
   background-color: var(--color-white);
   color: var(--card-accent-strong);
@@ -710,7 +679,6 @@ h4 {
   border-left-color: var(--card-accent);
 }
 
-/* Highlight bar becomes fully solid on hover for max contrast */
 .service-card:hover .service-card__highlight {
   background-color: var(--color-white);
 }
@@ -747,6 +715,8 @@ h4 {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-white);
+  min-width: 0;
+  overflow-wrap: break-word;
   text-shadow:
     0 1px 3px rgba(0, 0, 0, 0.5),
     0 2px 12px rgba(0, 0, 0, 0.3);
@@ -775,7 +745,6 @@ h4 {
   object-fit: cover;
 }
 
-/* Reveal on hover AND keyboard focus-within (e.g. tabbing to Learn more) */
 .service-card:hover .service-card__thumb,
 .service-card:focus-within .service-card__thumb {
   opacity: 1;
@@ -803,7 +772,7 @@ h4 {
 
 .service-card__features {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-xs);
   margin-bottom: var(--space-md);
 }
@@ -931,8 +900,6 @@ h4 {
   animation: learnMoreBlink 1.4s ease-in-out infinite;
 }
 
-/* But don't blink while the link itself is focused — keep it
-   fully visible and steady so a keyboard user can read/click it */
 .service-card__link:focus-visible {
   animation: none;
   opacity: 1;
@@ -957,10 +924,6 @@ h4 {
     text-shadow 0.25s ease;
 }
 
-/* assets/css/style.css — add at the end of the Services block */
-
-/* Devices without real hover (touchscreens): apply the "hovered" look
-   by default, since there's no hover gesture to trigger it. */
 @media (hover: none) and (pointer: coarse) {
   .service-card__media img {
     opacity: 0;
@@ -1000,8 +963,7 @@ h4 {
     opacity: 1;
     transform: scale(1);
   }
-  /* No blink on touch devices — it would just be permanently
-     mid-animation with nothing to "trigger" it meaningfully */
+
   .service-card__link {
     animation: none;
     opacity: 1;
@@ -1038,8 +1000,6 @@ h4 {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* assets/css/style.css — append below the Services section block */
-
 /* ---------- How It Works ---------- */
 .how-it-works {
   padding-block: var(--space-xl);
@@ -1053,7 +1013,7 @@ h4 {
   list-style: none;
   margin: 0;
   padding: 0;
-  counter-reset: none; /* using explicit .step__number instead of ::marker */
+  counter-reset: none;
 }
 
 .step {
@@ -1120,16 +1080,12 @@ h4 {
   margin: 0;
 }
 
-/* assets/css/style.css — append below the How It Works block */
-
 /* ---------- Why Families Choose Us ---------- */
 .why-us {
   padding-block: var(--space-xl);
   background-color: #f9faf6;
   /* background-color: var(--color-cream); */
 }
-
-/* assets/css/style.css — append below the Why Us block */
 
 /* ---------- Float-in scroll animation ---------- */
 [data-animate="float-in"] {
@@ -1145,25 +1101,36 @@ h4 {
   transform: translateY(0);
 }
 
-/* Stagger: each card in the grid animates slightly after the previous
-   one, using CSS nth-child delays so no JS timing logic is needed */
-.why-grid .why-item:nth-child(1) {
+[data-animate="float-in"]:nth-child(1) {
   transition-delay: 0s;
 }
-.why-grid .why-item:nth-child(2) {
+
+[data-animate="float-in"]:nth-child(2) {
   transition-delay: 0.08s;
 }
-.why-grid .why-item:nth-child(3) {
+
+[data-animate="float-in"]:nth-child(3) {
   transition-delay: 0.16s;
 }
-.why-grid .why-item:nth-child(4) {
+
+[data-animate="float-in"]:nth-child(4) {
   transition-delay: 0.24s;
 }
-.why-grid .why-item:nth-child(5) {
+
+[data-animate="float-in"]:nth-child(5) {
   transition-delay: 0.32s;
 }
-.why-grid .why-item:nth-child(6) {
+
+[data-animate="float-in"]:nth-child(6) {
   transition-delay: 0.4s;
+}
+
+[data-animate="float-in"]:nth-child(7) {
+  transition-delay: 0.48s;
+}
+
+[data-animate="float-in"]:nth-child(8) {
+  transition-delay: 0.56s;
 }
 
 /* Respect reduced-motion: skip the animation, show content immediately */
@@ -1230,16 +1197,12 @@ h4 {
   line-height: 1.45;
 }
 
-/* assets/css/style.css — append below the Why Us block */
-
 /* ---------- Commitment to Quality Care ---------- */
 .quality {
   padding-block: var(--space-xl);
   background-color: var(--color-teal);
 }
 
-/* On-dark variant of the shared section-intro component —
-   only overrides text color, structure stays identical */
 .section-intro--on-dark .section-intro__title {
   color: var(--color-white);
 }
@@ -1255,8 +1218,6 @@ h4 {
   margin: 0;
   padding: 0;
 }
-
-/* assets/css/style.css — update .quality-item, add the swipe pseudo-element */
 
 .quality-item {
   position: relative;
@@ -1280,8 +1241,6 @@ h4 {
   background-color: rgba(255, 255, 255, 0.22);
 }
 
-/* The shine itself: a diagonal light band, parked off-canvas to the
-   left at rest, swept across to the right on hover. */
 .quality-item::after {
   content: "";
   position: absolute;
@@ -1367,7 +1326,6 @@ h4 {
     0 1px 4px rgba(0, 0, 0, 0.45),
     0 2px 8px rgba(0, 0, 0, 0.25);
 }
-/* assets/css/style.css — append below the Quality Care block */
 
 /* ---------- Testimonials ---------- */
 .testimonials {
@@ -1466,8 +1424,6 @@ h4 {
   color: var(--color-text-muted);
 }
 
-/* assets/css/style.css — append below the Testimonials block */
-
 /* ---------- Coverage ---------- */
 .coverage {
   padding-block: var(--space-xl);
@@ -1530,8 +1486,6 @@ h4 {
   height: auto;
   display: block;
 }
-
-/* assets/css/style.css — replace the entire previous .cta-band block */
 
 /* ---------- CTA Band ---------- */
 .cta-band {
@@ -1597,8 +1551,6 @@ h4 {
   width: 100%;
   justify-content: center;
 }
-
-/* assets/css/style.css — append at the end of the file */
 
 /* ---------- Site Footer ---------- */
 .site-footer {
@@ -1747,8 +1699,6 @@ h4 {
   color: var(--color-orange);
 }
 
-/* assets/css/style.css — append: Breadcrumb + Page Hero components */
-
 .breadcrumb {
   margin-bottom: var(--space-sm);
 }
@@ -1822,10 +1772,7 @@ h4 {
   object-fit: cover;
 }
 
-/* Services section 2 */
-/* assets/css/style.css — append: Badge Pill, Service Detail, Info Card, Tag components */
-
-/* ---------- Badge Pill (reusable — image overlay labels, section tags) ---------- */
+/* ---------- Badge Pill ---------- */
 .badge-pill {
   display: inline-flex;
   align-items: center;
@@ -1991,37 +1938,20 @@ h4 {
   padding: 0.3rem 0.7rem;
 }
 
-/* assets/css/style.css — append: Service Detail background variant + badge color variant */
-
-/* Tinted background variant — alternates with the default white/cream
-   background so consecutive .service-detail sections read as distinct */
 .service-detail--tinted {
-  background-color: rgba(
-    158,
-    206,
-    201,
-    0.18
-  ); /* soft teal tint, not a
-    full solid fill — keeps text/card contrast identical to the default
-    variant, no separate text-color rules needed */
+  background-color: rgba(158, 206, 201, 0.18);
 }
 
-/* Badge Pill color variant — same structure as the default (olive),
-   just swaps the accent color for sections themed around --color-blue */
 .badge-pill--blue {
   color: var(--color-blue);
   background-color: rgba(59, 159, 193, 0.14);
 }
-
-/* assets/css/style.css — append: Specialized Care section + Specialty Card component */
 
 /* ---------- Specialized Care ---------- */
 .specialized-care {
   padding-block: var(--space-xl);
 }
 
-/* .section-intro's built-in actions slot — reuses .service-detail__actions
-   directly rather than inventing a new button-row class */
 .section-intro .service-detail__actions {
   justify-content: center;
   margin-bottom: 0;
@@ -2036,9 +1966,6 @@ h4 {
   padding: 0;
 }
 
-/* ---------- Specialty Card (new — image + bottom text overlay) ---------- */
-/* Same gradient-scrim technique already used on the homepage's .emotive
-   section, applied here at card scale rather than full-section scale. */
 .specialty-card {
   position: relative;
   isolation: isolate;
@@ -2098,8 +2025,6 @@ h4 {
   max-width: 40ch;
 }
 
-/* assets/css/style.css — append: Care Process section + Process Visual component */
-
 /* ---------- Care Planning Process ---------- */
 /* .care-process {
   padding-block: var(--space-xl);
@@ -2144,8 +2069,6 @@ h4 {
   gap: var(--space-sm);
   font-size: 0.75rem;
 } */
-
-/* assets/css/style.css — append: FAQ component */
 
 /* ---------- FAQ ---------- */
 .faq {
@@ -2213,9 +2136,7 @@ h4 {
 
 .faq-item__answer {
   padding-top: var(--space-sm);
-  padding-left: calc(
-    36px + var(--space-sm)
-  ); /* aligns with the question text, not the icon */
+  padding-left: calc(36px + var(--space-sm));
 }
 .faq-item__answer p {
   font-size: 0.875rem;
@@ -2232,12 +2153,8 @@ h4 {
   margin: var(--space-lg) 0 0;
 }
 
-/* assets/css/style.css — append: Page Hero color variant + Breadcrumb dark variant */
-
 /* ---------- Page Hero: olive variant ---------- */
-/* Same structure/layout as .page-hero (used on Services), just a solid
-   brand-color fill instead of cream, with light text — same "on-dark"
-   contrast pattern already proven on the homepage's Quality Care section. */
+
 .page-hero--olive {
   background-color: var(--color-olive);
 }
@@ -2249,10 +2166,7 @@ h4 {
   color: rgba(255, 255, 255, 0.9);
 }
 .page-hero--olive .page-hero__media img {
-  box-shadow: none; /* the section's own solid background already gives
-    the image enough separation; a shadow here would look muddy against
-    a flat color fill rather than the cream/white backgrounds it was
-    originally designed for */
+  box-shadow: none;
 }
 
 /* ---------- Breadcrumb: on-dark variant ---------- */
@@ -2273,19 +2187,13 @@ h4 {
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* assets/css/style.css — append: new .value-card / .value-grid components */
-
 /* ---------- Values Section ---------- */
 .values {
   padding-block: var(--space-xl);
 }
 
 /* ---------- Value Card ---------- */
-/* New, reusable component: icon + title + short italic eyebrow + desc,
-   centered, flat (no shadow/border) — deliberately calmer than
-   .why-item or .quality-item, since this content reads as editorial/
-   principle-driven rather than conversion-focused. Reused for Mission/
-   Vision/Values, Our Approach to Care, and Why Families Trust Us. */
+
 .value-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -2336,20 +2244,10 @@ h4 {
   margin: 0 auto;
 }
 
-/* assets/css/style.css — append: Approach section wrapper only.
-   .value-card / .value-grid / .value-grid--cols-3 all already exist —
-   this section reuses them with zero modification. */
-
 .approach {
   padding-block: var(--space-xl);
-  background-color: var(
-    --color-cream
-  ); /* alternates background with
-    the sections above/below, same rhythm pattern already used on the
-    homepage (white → cream → white → teal...) */
+  background-color: var(--color-cream);
 }
-
-/* assets/css/style.css — append: Credentials section + new Stat Card component */
 
 /* ---------- Credentials ---------- */
 .credentials {
@@ -2390,13 +2288,8 @@ h4 {
   line-height: 1.4;
 }
 
-/* assets/css/style.css — append: one small addition for the inline email row */
-
 /* ---------- Page Hero: inline contact line (new, tiny, reusable) ---------- */
-/* A single small addition to .page-hero — not a new component, just an
-   optional inline row for a linked contact detail sitting between the
-   description and the action buttons. Uses .icon sizing already
-   established by the header's phone icon. */
+
 .page-hero__email {
   display: flex;
   align-items: center;
@@ -2421,8 +2314,6 @@ h4 {
   color: var(--color-orange);
 }
 
-/* assets/css/style.css — append: new .contact-method component */
-
 /* ---------- Contact Options ---------- */
 .contact-options {
   padding-block: var(--space-xl);
@@ -2439,9 +2330,7 @@ h4 {
 }
 
 /* ---------- Contact Method (new) ---------- */
-/* Reuses the icon-circle sizing/color pattern already established by
-   .value-card__icon, but adds a distinct "value" slot — a real,
-   visually prominent link — which .value-card has no equivalent for. */
+
 .contact-method {
   text-align: center;
 }
@@ -2489,17 +2378,11 @@ h4 {
   text-decoration: underline;
 }
 
-/* assets/css/style.css — append: Consultation section wrapper + new Form Field system */
-
 /* ---------- Consultation ---------- */
 .consultation {
   padding-block: var(--space-xl);
 }
 
-/* .service-detail__inner and .service-detail__content are reused
-   directly (see explanation below) — only this small flex-basis rule
-   is new, giving the form column the same proportion .service-detail__
-   media normally takes. */
 .consultation-form-wrap {
   flex: 1;
 }
@@ -2542,15 +2425,17 @@ h4 {
   color: var(--color-text-muted);
 }
 
-/* Custom, more visible focus ring for form fields specifically —
-   replaces the global outline here rather than stacking both, since
-   two competing focus indicators on a small input looks noisy. Still
-   meets the "visible focus indicator" requirement on its own. */
 .form-field__input:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
   border-color: var(--color-blue);
   box-shadow: 0 0 0 3px rgba(59, 159, 193, 0.18);
+}
+
+@media (forced-colors: active) {
+  .form-field__input:focus-visible {
+    box-shadow: none;
+  }
 }
 
 .form-field__select {
@@ -2573,15 +2458,65 @@ h4 {
   margin: 0;
 }
 
-/* assets/css/style.css — append: generic tint utility + section padding */
-
 .coverage-areas {
   padding-block: var(--space-xl);
 }
 
-/* ---------- Generic tint utility (new — replaces the need for
-   block-specific tint modifiers like .service-detail--tinted going
-   forward) ---------- */
 .section--tinted-teal {
   background-color: rgba(158, 206, 201, 0.18);
+}
+
+/* ---------- Confirmation (new — thank-you / success state) ---------- */
+.confirmation {
+  padding-block: calc(var(--space-xl) * 1.5);
+  background-color: var(--color-cream);
+}
+
+.confirmation__inner {
+  max-width: 560px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.confirmation__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-olive);
+  color: var(--color-white);
+  margin: 0 auto var(--space-md);
+  box-shadow: var(--shadow-soft);
+}
+.confirmation__icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.confirmation__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-sm);
+}
+
+.confirmation__desc {
+  font-size: 1.0625rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0 0 var(--space-sm);
+}
+
+.confirmation__note {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-lg);
+}
+
+.confirmation__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
 }
