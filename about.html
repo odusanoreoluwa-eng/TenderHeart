@@ -7,7 +7,7 @@
     <title>About Us | Tender Heart Care Solution</title>
     <meta
       name="description"
-      content="Learn about Tender Heart Care Solution — our story, mission, values, and approach to compassionate elder care across Nigeria."
+      content="Tender Heart Care Solution provides warm, professional home care, companionship and respite care, elderly care, and childcare and family support for families across Lagos, Abuja, Ogun, Oyo, and Rivers."
     />
     <!-- canonical -->
     <link
@@ -53,12 +53,17 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": [
+          "LocalBusiness",
+          "MedicalBusiness",
+          "HomeHealthCareService",
+          "ChildCare"
+        ],
         "additionalType": "https://schema.org/HomeHealthCareService",
         "@id": "https://www.tenderheartcarehome.com/#organization",
         "name": "Tender Heart Care Solution",
         "url": "https://www.tenderheartcarehome.com/",
-        "telephone": "+2349087519481",
+        "telephone": "+2348071563080",
         "email": "info@tenderheartcarehome.com",
         "logo": "https://www.tenderheartcarehome.com/assets/images/logo/logo.png",
         "image": "https://www.tenderheartcarehome.com/assets/images/hero/og-cover.jpg",
@@ -76,6 +81,10 @@
           { "@type": "State", "name": "Ogun" },
           { "@type": "State", "name": "Oyo" },
           { "@type": "State", "name": "Rivers" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/tenderheartcaresolutions",
+          "https://www.facebook.com/share/1Azgd5DJYL/"
         ],
         "openingHoursSpecification": [
           {
@@ -101,7 +110,7 @@
           {
             "@type": "ContactPoint",
             "contactType": "customer service",
-            "telephone": "+2349087519481",
+            "telephone": "+2348071563080",
             "email": "info@tenderheartcarehome.com",
             "areaServed": "NG",
             "availableLanguage": ["English"]
@@ -115,28 +124,28 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "In-Home Care"
+                "name": "Home Care Support"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Care Facility Support"
+                "name": "Companionship & Respite Care"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Dementia Care"
+                "name": "Elderly Care"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Palliative Care"
+                "name": "Childcare & Family Support"
               }
             }
           ]
@@ -210,7 +219,7 @@
         </nav>
 
         <div class="header-actions">
-          <a href="tel:+2349087519481" class="header-actions__phone">
+          <a href="tel:+2348071563080" class="header-actions__phone">
             <svg
               class="icon"
               viewBox="0 0 24 24"
@@ -225,7 +234,7 @@
             </svg>
             <span class="header-actions__phone-text">
               <small>Call Anytime</small>
-              +2349087519481
+              +2348071563080
             </span>
           </a>
 
@@ -287,7 +296,7 @@
 
             <div class="page-hero__media">
               <img
-                src="assets/images/about/about-hero.png"
+                src="assets/images/about/about-hero.webp"
                 alt="A Tender Heart caregiver sharing a warm moment with an elderly client"
                 width="600"
                 height="440"
@@ -307,7 +316,7 @@
         <div class="container service-detail__inner">
           <div class="service-detail__media">
             <img
-              src="assets/images/about/ourStory.png"
+              src="assets/images/about/our-story.webp"
               alt="A Tender Heart caregiver and client sharing a warm conversation at home"
               width="480"
               height="420"
@@ -668,7 +677,7 @@
 
           <div class="cta-band__actions">
             <a
-              href="https://wa.me/+2349087519481?text=Hello%20Tender%20Heart%20Care%20Solutions,%20I%20would%20like%20to%20learn%20more%20about%20your%20care%20services."
+              href="https://wa.me/+2348071563080?text=Hello%20Tender%20Heart%20Care%20Solutions,%20I%20would%20like%20to%20learn%20more%20about%20your%20care%20services."
               class="btn btn--outline"
               target="_blank"
               rel="noopener noreferrer"
@@ -721,7 +730,12 @@
             </p>
             <ul class="site-footer__socials" aria-label="Social media">
               <li>
-                <a href="#" aria-label="Facebook">
+                <a
+                  href="https://www.facebook.com/share/1Azgd5DJYL/"
+                  aria-label="Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -734,7 +748,12 @@
                 </a>
               </li>
               <li>
-                <a href="#" aria-label="Instagram">
+                <a
+                  href="https://www.instagram.com/tenderheartcaresolutions?"
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -775,25 +794,36 @@
               <li>
                 <a href="about.html#why-choose-us">Why Families Trust Us</a>
               </li>
-              <li><a href="resources.html">Resources</a></li>
+              <!-- <li><a href="resources.html">Resources</a></li> -->
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </nav>
+
+          <!-- Apply this exact <nav class="site-footer__col" aria-labelledby="footer-services">
+     block on ALL FOUR pages (index.html, services.html, about.html,
+     contact.html), replacing the current one -->
 
           <nav class="site-footer__col" aria-labelledby="footer-services">
             <h3 id="footer-services" class="site-footer__heading">
               Our Services
             </h3>
             <ul class="site-footer__list">
-              <li><a href="services.html#in-home-care">In-Home Care</a></li>
               <li>
-                <a href="services.html#care-home-support">Care Home Support</a>
+                <a href="services.html#home-care-support">Home Care Support</a>
               </li>
-              <li><a href="services.html#dementia-care">Dementia</a></li>
               <li>
-                <a href="services.html#palliative-care">Palliative Care</a>
+                <a href="services.html#companionship-respite-care"
+                  >Companionship &amp; Respite Care</a
+                >
               </li>
-              <li><a href="services.html#respite-care">Respite Care</a></li>
+              <li><a href="services.html#elderly-care">Elderly Care</a></li>
+              <li>
+                <a href="services.html#childcare-family-support"
+                  >Childcare &amp; Family Support</a
+                >
+              </li>
+
+              <!-- <li><a href="services.html#respite-care">Respite Care</a></li>
               <li><a href="services.html#companionship">Companionship</a></li>
               <li>
                 <a href="services.html#medication-management"
@@ -802,14 +832,14 @@
               </li>
               <li>
                 <a href="services.html#meal-preparation">Meal Preparation</a>
-              </li>
+              </li> -->
             </ul>
           </nav>
 
           <div class="site-footer__col">
             <h3 class="site-footer__heading">Contact Us</h3>
             <ul class="site-footer__contact">
-              <li>
+              <!-- <li>
                 <svg
                   class="site-footer__contact-icon"
                   viewBox="0 0 24 24"
@@ -824,7 +854,7 @@
                 <span
                   >12, Companion Way, Lekki Phase 1, Lagos State, Nigeria</span
                 >
-              </li>
+              </li> -->
               <li>
                 <svg
                   class="site-footer__contact-icon"
@@ -839,8 +869,8 @@
                   />
                 </svg>
                 <span>
-                  <a href="tel:+2349087519481">+234 908 751 9481</a><br />
-                  <a href="tel:+2347017489980">+234 701 748 9980</a>
+                  <a href="tel:+2348071563080">+234 807 156 3080</a><br />
+                  <a href="tel:+2349087519481">+234 908 751 9481</a>
                 </span>
               </li>
               <li>

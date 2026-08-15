@@ -7,7 +7,7 @@
     <title>Our Services | Tender Heart Care Solution</title>
     <meta
       name="description"
-      content="Explore In-Home Care, Care Facility support, and Specialized Care from Tender Heart Care Solution — compassionate, personalized care for every stage of aging in Nigeria."
+      content="Tender Heart Care Solution provides warm, professional home care, companionship and respite care, elderly care, and childcare and family support for families across Lagos, Abuja, Ogun, Oyo, and Rivers."
     />
     <!-- canonical -->
     <link
@@ -55,12 +55,17 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": [
+          "LocalBusiness",
+          "MedicalBusiness",
+          "HomeHealthCareService",
+          "ChildCare"
+        ],
         "additionalType": "https://schema.org/HomeHealthCareService",
         "@id": "https://www.tenderheartcarehome.com/#organization",
         "name": "Tender Heart Care Solution",
         "url": "https://www.tenderheartcarehome.com/",
-        "telephone": "+2349087519481",
+        "telephone": "+2348071563080",
         "email": "info@tenderheartcarehome.com",
         "logo": "https://www.tenderheartcarehome.com/assets/images/logo/logo.png",
         "image": "https://www.tenderheartcarehome.com/assets/images/hero/og-cover.jpg",
@@ -78,6 +83,10 @@
           { "@type": "State", "name": "Ogun" },
           { "@type": "State", "name": "Oyo" },
           { "@type": "State", "name": "Rivers" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/tenderheartcaresolutions",
+          "https://www.facebook.com/share/1Azgd5DJYL/"
         ],
         "openingHoursSpecification": [
           {
@@ -103,7 +112,7 @@
           {
             "@type": "ContactPoint",
             "contactType": "customer service",
-            "telephone": "+2349087519481",
+            "telephone": "+2348071563080",
             "email": "info@tenderheartcarehome.com",
             "areaServed": "NG",
             "availableLanguage": ["English"]
@@ -117,28 +126,28 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "In-Home Care"
+                "name": "Home Care Support"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Care Facility Support"
+                "name": "Companionship & Respite Care"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Dementia Care"
+                "name": "Elderly Care"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Palliative Care"
+                "name": "Childcare & Family Support"
               }
             }
           ]
@@ -227,7 +236,7 @@
             </svg>
             <span class="header-actions__phone-text">
               <small>Call Anytime</small>
-              +234 908 751 9481
+              +234 807 1563080
             </span>
           </a>
 
@@ -282,7 +291,7 @@
 
             <div class="page-hero__media">
               <img
-                src="assets/images/services/services-hero.png"
+                src="assets/images/services/services-hero.webp"
                 alt="A caregiver assisting an elderly woman while other residents socialize in a bright, comfortable care setting"
                 width="600"
                 height="440"
@@ -295,15 +304,16 @@
       </section>
       <!-- services.html — insert directly after the closing </section> of .page-hero -->
 
+      <!-- Section 1: Home Care Support (was In-Home Care) -->
       <section
         class="service-detail"
-        id="in-home-care"
-        aria-labelledby="in-home-care-heading"
+        id="home-care-support"
+        aria-labelledby="home-care-support-heading"
       >
         <div class="container service-detail__inner">
           <div class="service-detail__media">
             <img
-              src="assets/images/services/in-home-care.png"
+              src="assets/images/services/in-home-care.webp"
               alt="A caregiver assisting an elderly man at home"
               width="480"
               height="420"
@@ -326,19 +336,16 @@
           </div>
 
           <div class="service-detail__content">
-            <h2 id="in-home-care-heading" class="service-detail__title">
-              In-Home Care
+            <h2 id="home-care-support-heading" class="service-detail__title">
+              Home Care Support
             </h2>
             <p class="service-detail__desc">
-              Compassionate in-home care that helps individuals maintain
+              Compassionate support at home that helps individuals maintain
               comfort, independence, and dignity while remaining in familiar
               surroundings.
             </p>
 
             <div class="service-detail__actions">
-              <!-- <a href="#in-home-care-compare" class="btn btn--outline"
-                >Compare Options</a
-              > -->
               <a href="contact.html" class="btn btn--primary"
                 >Discuss Your Needs</a
               >
@@ -395,9 +402,7 @@
                   <li id="meal-preparation">Meal Preparation</li>
                   <li id="medication-management">Medication Reminders</li>
                   <li>Mobility Assistance</li>
-                  <li id="companionship">Companionship</li>
                   <li>Live-in Care</li>
-                  <li id="respite-care">Respite Care</li>
                 </ul>
                 <ul class="tag-list">
                   <li class="tag">Flexible scheduling</li>
@@ -409,16 +414,18 @@
         </div>
       </section>
 
+      <!-- Section 2: Companionship & Respite Care (was Care Facility) —
+     same tinted section, same two-info-card shape -->
       <section
         class="service-detail service-detail--tinted"
-        id="care-home-support"
-        aria-labelledby="care-home-support-heading"
+        id="companionship-respite-care"
+        aria-labelledby="companionship-respite-care-heading"
       >
         <div class="container service-detail__inner">
           <div class="service-detail__media">
             <img
-              src="assets/images/services/care-facility.png"
-              alt="Caregivers assisting residents in a bright, communal care facility setting"
+              src="assets/images/services/Respite-Care.webp"
+              alt="A caregiver sharing a warm moment of companionship with a client"
               width="480"
               height="420"
               loading="lazy"
@@ -431,29 +438,56 @@
                 stroke-width="2"
                 aria-hidden="true"
               >
-                <path d="M9 12l2 2 4-4" />
-                <path
-                  d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4z"
-                />
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 3" />
               </svg>
-              Facility Support
+              Guided Support
             </span>
           </div>
 
           <div class="service-detail__content">
-            <h2 id="care-home-support-heading" class="service-detail__title">
-              Care Facility
+            <h2
+              id="companionship-respite-care-heading"
+              class="service-detail__title"
+            >
+              Companionship &amp; Respite Care
             </h2>
             <p class="service-detail__desc">
-              A calm, safe environment designed to support daily living—now and
-              as needs change over time.
+              Friendly companionship and short-term relief support—so family
+              caregivers can rest, too.
             </p>
 
             <div class="service-detail__actions">
-              <a href="contact.html" class="btn btn--primary">Book a Tour</a>
+              <a href="contact.html" class="btn btn--primary"
+                >Discuss Your Needs</a
+              >
             </div>
 
             <div class="info-grid">
+              <div class="info-card">
+                <span class="info-card__icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                  </svg>
+                </span>
+                <h3 class="info-card__title">Companionship</h3>
+                <p class="info-card__subtitle">Friendly, familiar faces</p>
+                <p class="info-card__desc">
+                  Regular visits focused on connection, conversation, and
+                  engagement—reducing isolation and brightening the day.
+                </p>
+                <ul class="tag-list">
+                  <li class="tag">Regular visits</li>
+                  <li class="tag">Social engagement</li>
+                </ul>
+              </div>
+
               <div class="info-card">
                 <span class="info-card__icon" aria-hidden="true">
                   <svg
@@ -466,45 +500,15 @@
                     <path d="M12 7v5l3 3" />
                   </svg>
                 </span>
-                <h3 class="info-card__title">When 24/7 support is needed</h3>
-                <p class="info-card__subtitle">Support that grows with you</p>
+                <h3 class="info-card__title">Respite Breaks</h3>
+                <p class="info-card__subtitle">Rest for family caregivers</p>
                 <p class="info-card__desc">
-                  Our residential care options provide structured support,
-                  meaningful daily engagement, and personalized attention from
-                  trained staff.
+                  Short-term relief care that gives primary family caregivers
+                  time to rest, recharge, or attend to their own needs.
                 </p>
                 <ul class="tag-list">
-                  <li class="tag">Safe environment</li>
-                  <li class="tag">Daily engagement</li>
-                </ul>
-              </div>
-
-              <div class="info-card">
-                <span class="info-card__icon" aria-hidden="true">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  >
-                    <path d="M12 20h9" />
-                    <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z" />
-                  </svg>
-                </span>
-                <h3 class="info-card__title">Facility care highlights</h3>
-                <p class="info-card__subtitle">
-                  Designed for comfort and consistency
-                </p>
-                <ul class="info-card__list">
-                  <li>24/7 Care</li>
-                  <li>Safe Environment</li>
-                  <li>Activities &amp; Engagement</li>
-                  <li>Dining Support</li>
-                  <li>Personalized Care Plans</li>
-                </ul>
-                <ul class="tag-list">
-                  <li class="tag">Trained team</li>
-                  <li class="tag">Individualized plans</li>
+                  <li class="tag">Flexible scheduling</li>
+                  <li class="tag">Trusted coverage</li>
                 </ul>
               </div>
             </div>
@@ -512,6 +516,8 @@
         </div>
       </section>
 
+      <!-- Section 3: Specialized Care — merged Elderly Care + Childcare into
+     one section, one intro, two cards side by side -->
       <section
         class="specialized-care"
         aria-labelledby="specialized-care-heading"
@@ -523,8 +529,8 @@
               Specialized Care
             </h2>
             <p class="section-intro__desc">
-              When conditions become more complex, Tender Heart provides focused
-              support with experienced caregivers and compassionate guidance.
+              Focused, compassionate support for the moments that need it most—
+              for aging loved ones and for the little ones in your family.
             </p>
             <div class="service-detail__actions">
               <a href="contact.html" class="btn btn--primary"
@@ -534,44 +540,49 @@
           </div>
 
           <ul class="specialty-grid">
-            <li class="specialty-card" id="dementia-care">
+            <li class="specialty-card" id="elderly-care">
               <img
-                src="assets/images/services/dementia-care.png"
-                alt=""
+                src="assets/images/services/elderly-care.webp"
+                alt="care to elderly individuals"
                 loading="lazy"
                 width="380"
                 height="280"
               />
               <div class="specialty-card__overlay" aria-hidden="true"></div>
               <div class="specialty-card__content">
-                <h3 class="specialty-card__title">Dementia Care</h3>
+                <h3 class="specialty-card__title">Elderly Care</h3>
                 <p class="specialty-card__desc">
-                  Structured routines, safety support, and compassionate
-                  approaches tailored to memory and behavior needs.
+                  Structured, compassionate support for aging loved
+                  ones—including dementia care and comfort-focused palliative
+                  guidance—tailored to each individual's journey.
                 </p>
               </div>
             </li>
 
-            <li class="specialty-card" id="palliative-care">
+            <li class="specialty-card" id="childcare-family-support">
               <img
-                src="assets/images/services/palliative-care.png"
-                alt=""
+                src="assets/images/services/Love&care.webp"
+                alt="care for children and family support"
                 loading="lazy"
                 width="380"
                 height="280"
               />
               <div class="specialty-card__overlay" aria-hidden="true"></div>
               <div class="specialty-card__content">
-                <h3 class="specialty-card__title">Palliative Support</h3>
+                <h3 class="specialty-card__title">
+                  Childcare &amp; Family Support
+                </h3>
                 <p class="specialty-card__desc">
-                  Relief-focused care designed to prioritize comfort, dignity,
-                  and quality of life for patients and families.
+                  Reliable, professional care for the little ones you love—from
+                  nannying and newborn care to after-school supervision, in the
+                  comfort of your home.
                 </p>
               </div>
             </li>
           </ul>
         </div>
       </section>
+
       <!-- services.html — insert directly after the closing </section> of .specialized-care -->
       <!-- 
       <section class="care-process" aria-labelledby="care-process-heading">
@@ -844,7 +855,7 @@
 
           <div class="cta-band__actions">
             <a
-              href="https://wa.me/+2349087519481?text=Hello%20Tender%20Heart%20Care%20Solution.%20I%20visited%20your%20website%20and%20would%20like%20to%20learn%20more%20about%20your%20care%20services.%20Could%20you%20please%20help%20me%20choose%20the%20most%20suitable%20service%20for%20my%20needs%3F"
+              href="https://wa.me/+2348071563080?text=Hello%20Tender%20Heart%20Care%20Solution.%20I%20visited%20your%20website%20and%20would%20like%20to%20learn%20more%20about%20your%20care%20services.%20Could%20you%20please%20help%20me%20choose%20the%20most%20suitable%20service%20for%20my%20needs%3F"
               class="btn btn--outline"
               target="_blank"
               rel="noopener noreferrer"
@@ -878,7 +889,7 @@
               aria-label="Tender Heart Care Solution — Home"
             >
               <img
-                src="assets/images/favicons/android-chrome-512x512.png"
+                src="assets/images/logo/logo.png"
                 alt=""
                 class="logo__icon"
                 width="40"
@@ -895,7 +906,12 @@
             </p>
             <ul class="site-footer__socials" aria-label="Social media">
               <li>
-                <a href="#" aria-label="Facebook">
+                <a
+                  href="https://www.facebook.com/share/1Azgd5DJYL/"
+                  aria-label="Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -908,7 +924,12 @@
                 </a>
               </li>
               <li>
-                <a href="#" aria-label="Instagram">
+                <a
+                  href="https://www.instagram.com/tenderheartcaresolutions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -947,25 +968,36 @@
               <li><a href="about.html">About Us</a></li>
               <li><a href="services.html" aria-current="page">Services</a></li>
               <li><a href="about.html#why-choose-us">Why Choose Us</a></li>
-              <li><a href="resources.html">Resources</a></li>
+              <!-- <li><a href="resources.html">Resources</a></li> -->
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </nav>
+
+          <!-- Apply this exact <nav class="site-footer__col" aria-labelledby="footer-services">
+     block on ALL FOUR pages (index.html, services.html, about.html,
+     contact.html), replacing the current one -->
 
           <nav class="site-footer__col" aria-labelledby="footer-services">
             <h3 id="footer-services" class="site-footer__heading">
               Our Services
             </h3>
             <ul class="site-footer__list">
-              <li><a href="services.html#in-home-care">In-Home Care</a></li>
               <li>
-                <a href="services.html#care-home-support">Care Home Support</a>
+                <a href="services.html#home-care-support">Home Care Support</a>
               </li>
-              <li><a href="services.html#dementia-care">Dementia</a></li>
               <li>
-                <a href="services.html#palliative-care">Palliative Care</a>
+                <a href="services.html#companionship-respite-care"
+                  >Companionship &amp; Respite Care</a
+                >
               </li>
-              <li><a href="services.html#respite-care">Respite Care</a></li>
+              <li><a href="services.html#elderly-care">Elderly Care</a></li>
+              <li>
+                <a href="services.html#childcare-family-support"
+                  >Childcare &amp; Family Support</a
+                >
+              </li>
+
+              <!-- <li><a href="services.html#respite-care">Respite Care</a></li>
               <li><a href="services.html#companionship">Companionship</a></li>
               <li>
                 <a href="services.html#medication-management"
@@ -974,14 +1006,14 @@
               </li>
               <li>
                 <a href="services.html#meal-preparation">Meal Preparation</a>
-              </li>
+              </li> -->
             </ul>
           </nav>
 
           <div class="site-footer__col">
             <h3 class="site-footer__heading">Contact Us</h3>
             <ul class="site-footer__contact">
-              <li>
+              <!-- <li>
                 <svg
                   class="site-footer__contact-icon"
                   viewBox="0 0 24 24"
@@ -996,7 +1028,7 @@
                 <span
                   >12, Companion Way, Lekki Phase 1, Lagos State, Nigeria</span
                 >
-              </li>
+              </li> -->
               <li>
                 <svg
                   class="site-footer__contact-icon"
@@ -1011,8 +1043,8 @@
                   />
                 </svg>
                 <span>
-                  <a href="tel:+2349087519481">+234 908 751 9481</a><br />
-                  <a href="tel:+2347017489980">+234 701 748 9980</a>
+                  <a href="tel:+2348071563080">+234 807 156 3080</a><br />
+                  <a href="tel:+2349087519481">+234 908 751 9481</a>
                 </span>
               </li>
               <li>

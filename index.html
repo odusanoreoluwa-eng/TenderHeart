@@ -9,7 +9,7 @@
     </title>
     <meta
       name="description"
-      content="Tender Heart Care Solution provides warm, professional home care, facility care, dementia support, and palliative care for families across Lagos, Ogun, Oyo, Rivers and Abuja."
+      content="Tender Heart Care Solution provides warm, professional home care, companionship and respite care, elderly care, and childcare and family support for families across Lagos, Abuja, Ogun, Oyo, and Rivers."
     />
 
     <!-- Canonical -->
@@ -55,19 +55,24 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": [
+          "LocalBusiness",
+          "MedicalBusiness",
+          "HomeHealthCareService",
+          "ChildCare"
+        ],
         "additionalType": "https://schema.org/HomeHealthCareService",
         "@id": "https://www.tenderheartcarehome.com/#organization",
         "name": "Tender Heart Care Solution",
         "url": "https://www.tenderheartcarehome.com/",
-        "telephone": "+2349087519481",
+        "telephone": "+2348071563080",
         "email": "info@tenderheartcarehome.com",
         "logo": "https://www.tenderheartcarehome.com/assets/images/logo/logo.png",
         "image": "https://www.tenderheartcarehome.com/assets/images/hero/og-cover.jpg",
         "description": "Tender Heart Care Solution provides compassionate, professional home care, care facility support, dementia care, and palliative care for families across Lagos, Abuja (FCT), Ogun, Oyo, and Rivers, Nigeria.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "12, Companion Way, Lekki Phase 1",
+          <!-- "streetAddress": "12, Companion Way, Lekki Phase 1", -->
           "addressLocality": "Lagos",
           "addressRegion": "Lagos State",
           "addressCountry": "NG"
@@ -78,6 +83,10 @@
           { "@type": "State", "name": "Ogun" },
           { "@type": "State", "name": "Oyo" },
           { "@type": "State", "name": "Rivers" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/tenderheartcaresolutions",
+          "https://www.facebook.com/share/1Azgd5DJYL/"
         ],
         "openingHoursSpecification": [
           {
@@ -103,7 +112,7 @@
           {
             "@type": "ContactPoint",
             "contactType": "customer service",
-            "telephone": "+2349087519481",
+            "telephone": "+2348071563080",
             "email": "info@tenderheartcarehome.com",
             "areaServed": "NG",
             "availableLanguage": ["English"]
@@ -117,28 +126,28 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "In-Home Care"
+                "name": "Home Care Support"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Care Facility Support"
+                "name": "Companionship & Respite Care"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Dementia Care"
+                "name": "Elderly Care"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Palliative Care"
+                "name": "Childcare & Family Support"
               }
             }
           ]
@@ -212,7 +221,7 @@
         </nav>
 
         <div class="header-actions">
-          <a href="tel:+2349087519481" class="header-actions__phone">
+          <a href="tel:+2348071563080" class="header-actions__phone">
             <svg
               class="icon"
               viewBox="0 0 24 24"
@@ -227,7 +236,7 @@
             </svg>
             <span class="header-actions__phone-text">
               <small>Call Anytime</small>
-              +234 908 751 9481
+              +234 807 156 3080
             </span>
           </a>
 
@@ -254,7 +263,7 @@
         <div class="hero__top">
           <div class="hero__media">
             <img
-              src="assets/images/hero/hero.png"
+              src="assets/images/hero/hero.webp"
               alt="A caregiver smiling warmly alongside an elderly woman at home"
               class="hero__image"
               width="800"
@@ -286,17 +295,17 @@
 
           <div class="container">
             <div class="hero__content">
-              <p class="hero__eyebrow">Compassionate Care. Peace of Mind</p>
+              <p class="hero__eyebrow">Compassionate Care. Peace of Mind.</p>
 
               <h1 id="hero-heading" class="hero__title">
-                Quality Home Care for Your Loved Ones, Right Where They Belong
-                <span class="text-accent">at home</span> and
-                <span class="text-accent">beyond</span>.
+                Trusted Care for Your Loved Ones,
+                <span class="text-accent">Right Where They Belong.</span>
               </h1>
 
               <p class="hero__desc">
-                Tender Heart supports families with compassionate caregivers,
-                clear communication, and personalized care plans.
+                Tender Heart Care Solution provides compassionate, personalized
+                support that helps families feel confident, informed, and cared
+                for.
               </p>
 
               <div class="hero__actions">
@@ -304,7 +313,7 @@
                   >Book Consultation</a
                 >
                 <a
-                  href="https://wa.me/+2349087519481?text=Hello%20Tender%20Heart%20Care%20Solution"
+                  href="https://wa.me/+2348071563080?text=Hello%20Tender%20Heart%20Care%20Solution"
                   class="btn btn--outline"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -424,7 +433,7 @@
       <section class="emotive" aria-labelledby="emotive-heading">
         <div class="emotive__media">
           <img
-            src="assets/images/hero/emotive.png"
+            src="assets/images/hero/emotive.webp"
             alt="An elderly woman looking thoughtfully out a window while a caregiver comforts her"
             class="emotive__image"
             width="1200"
@@ -468,11 +477,13 @@
           </div>
 
           <ul class="service-grid">
-            <!-- In-Home Care -->
+            <!-- Elderly Care (was In-Home Care's teal slot) —
+       umbrella for Dementia + Palliative, mirrors the existing
+       Specialized Care section on services.html, renamed -->
             <li class="service-card service-card--teal">
               <div class="service-card__media">
                 <img
-                  src="assets/images/services/serviceOne.png"
+                  src="assets/images/services/serviceOne.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -488,17 +499,17 @@
                     aria-hidden="true"
                   >
                     <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21l7.78-7.55 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4z"
                     />
                   </svg>
-                  Daily Assistance
+                  Comprehensive Support
                 </span>
 
                 <div class="service-card__title-row">
-                  <h3 class="service-card__title">In-Home Care</h3>
+                  <h3 class="service-card__title">Elderly Care</h3>
                   <span class="service-card__thumb">
                     <img
-                      src="assets/images/services/serviceOne.png"
+                      src="assets/images/services/serviceOne.webp"
                       alt=""
                       loading="lazy"
                     />
@@ -507,8 +518,282 @@
                 <span class="service-card__divider" aria-hidden="true"></span>
 
                 <p class="service-card__desc">
-                  Personal support at home for comfort, safety, and
-                  independence.
+                  Compassionate support for aging loved ones, from memory care
+                  to comfort-focused guidance.
+                </p>
+
+                <ul class="service-card__features">
+                  <li class="service-card__feature">
+                    <span class="service-card__feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      >
+                        <rect x="3" y="4" width="18" height="16" rx="2" />
+                        <path d="M3 10h18" />
+                      </svg>
+                    </span>
+                    <p class="service-card__feature-title">Memory Care</p>
+                    <p class="service-card__feature-desc">
+                      A predictable, calm rhythm.
+                    </p>
+                  </li>
+                  <li class="service-card__feature">
+                    <span class="service-card__feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      >
+                        <path
+                          d="M11 21c-4-2.5-9-5.5-9-10.5A5.5 5.5 0 0 1 11 7a5.5 5.5 0 0 1 9 3.5C20 15.5 15 18.5 11 21z"
+                        />
+                      </svg>
+                    </span>
+                    <p class="service-card__feature-title">Comfort Care</p>
+                    <p class="service-card__feature-desc">
+                      Pain and ease, prioritized.
+                    </p>
+                  </li>
+                  <li class="service-card__feature">
+                    <span class="service-card__feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      >
+                        <path d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                      </svg>
+                    </span>
+                    <p class="service-card__feature-title">Trained Staff</p>
+                    <p class="service-card__feature-desc">
+                      Patient, experienced caregivers.
+                    </p>
+                  </li>
+                </ul>
+
+                <div class="service-card__highlight">
+                  <span class="service-card__highlight-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 21s-6.7-4.35-9.3-8.1C.9 10.2 1.8 6.6 5 5.3c2-.8 4 .1 5 1.7 1-1.6 3-2.5 5-1.7 3.2 1.3 4.1 4.9 2.3 7.6C18.7 16.65 12 21 12 21z"
+                      />
+                    </svg>
+                  </span>
+                  <span>
+                    <strong>Structured, comfort-focused care.</strong>
+                    Tailored to each individual's journey.
+                  </span>
+                </div>
+
+                <a href="services.html#elderly-care" class="service-card__link">
+                  Learn more<span class="visually-hidden">
+                    about Elderly Care</span
+                  >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </li>
+
+            <!-- Childcare & Family Support (was Care Home Support's blue slot) —
+       entirely new, copy taken directly from the client's brief -->
+            <li class="service-card service-card--blue">
+              <div class="service-card__media">
+                <img
+                  src="assets/images/services/serviceTwo.webp"
+                  alt=""
+                  loading="lazy"
+                />
+                <!-- ⚠️ PLACEHOLDER IMAGE — this is the old Care Home Support
+           facility photo. Needs real, licensed childcare photography
+           before this ships; do not launch with a mismatched image. -->
+              </div>
+
+              <div class="service-card__content">
+                <span class="service-card__badge">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 20v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                  Family Support
+                </span>
+
+                <div class="service-card__title-row">
+                  <h3 class="service-card__title">
+                    Childcare &amp; Family Support
+                  </h3>
+                  <span class="service-card__thumb">
+                    <img
+                      src="assets/images/services/serviceTwo.webp"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </span>
+                </div>
+                <span class="service-card__divider" aria-hidden="true"></span>
+
+                <p class="service-card__desc">
+                  Reliable, compassionate childcare in the comfort of your home.
+                </p>
+
+                <ul class="service-card__features">
+                  <li class="service-card__feature">
+                    <span class="service-card__feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      >
+                        <path d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                      </svg>
+                    </span>
+                    <p class="service-card__feature-title">Nanny Services</p>
+                    <p class="service-card__feature-desc">
+                      Reliable, in-home childcare.
+                    </p>
+                  </li>
+                  <li class="service-card__feature">
+                    <span class="service-card__feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      >
+                        <path
+                          d="M11 21c-4-2.5-9-5.5-9-10.5A5.5 5.5 0 0 1 11 7a5.5 5.5 0 0 1 9 3.5C20 15.5 15 18.5 11 21z"
+                        />
+                      </svg>
+                    </span>
+                    <p class="service-card__feature-title">Infant Care</p>
+                    <p class="service-card__feature-desc">
+                      Attentive newborn support.
+                    </p>
+                  </li>
+                  <li class="service-card__feature">
+                    <span class="service-card__feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      >
+                        <path
+                          d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                        />
+                        <path d="M14 2v6h6" />
+                        <path d="M9 15h6M9 11h3" />
+                      </svg>
+                    </span>
+                    <p class="service-card__feature-title">After-School Care</p>
+                    <p class="service-card__feature-desc">
+                      Homework support and safety.
+                    </p>
+                  </li>
+                </ul>
+
+                <div class="service-card__highlight">
+                  <span class="service-card__highlight-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 21s-6.7-4.35-9.3-8.1C.9 10.2 1.8 6.6 5 5.3c2-.8 4 .1 5 1.7 1-1.6 3-2.5 5-1.7 3.2 1.3 4.1 4.9 2.3 7.6C18.7 16.65 12 21 12 21z"
+                      />
+                    </svg>
+                  </span>
+                  <span>
+                    <strong>Care that comes from the heart.</strong>
+                    Peace of mind for every parent.
+                  </span>
+                </div>
+
+                <a
+                  href="services.html#childcare-family-support"
+                  class="service-card__link"
+                >
+                  Learn more<span class="visually-hidden">
+                    about Childcare &amp; Family Support</span
+                  >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </li>
+
+            <!-- Home Care Support (was Dementia Care's orange slot) —
+       renamed/merged from old In-Home Care; facility facts folded in
+       per the assumption flagged above, pending your confirmation -->
+            <li class="service-card service-card--orange">
+              <div class="service-card__media">
+                <img
+                  src="assets/images/services/serviceThree.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="service-card__content">
+                <span class="service-card__badge">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path d="M3 11 12 4l9 7" />
+                    <path d="M5 10v10h14V10" />
+                    <path d="M9 20v-6h6v6" />
+                  </svg>
+                  Daily Assistance
+                </span>
+
+                <div class="service-card__title-row">
+                  <h3 class="service-card__title">Home Care Support</h3>
+                  <span class="service-card__thumb">
+                    <img
+                      src="assets/images/services/serviceThree.webp"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </span>
+                </div>
+                <span class="service-card__divider" aria-hidden="true"></span>
+
+                <p class="service-card__desc">
+                  Personal support at home or in a supported setting, for
+                  comfort, safety, and independence.
                 </p>
 
                 <ul class="service-card__features">
@@ -582,141 +867,13 @@
                   </span>
                 </div>
 
-                <a href="services.html#in-home-care" class="service-card__link">
-                  Learn more
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </li>
-
-            <!-- Care Home Support -->
-            <li class="service-card service-card--blue">
-              <div class="service-card__media">
-                <img
-                  src="assets/images/services/serviceTwo.png"
-                  alt=""
-                  loading="lazy"
-                />
-              </div>
-
-              <div class="service-card__content">
-                <span class="service-card__badge">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    aria-hidden="true"
-                  >
-                    <path d="M4 21V8l8-5 8 5v13" />
-                    <path d="M9 21v-6h6v6" />
-                    <path d="M9 12h.01M15 12h.01" />
-                  </svg>
-                  Guided Support
-                </span>
-
-                <div class="service-card__title-row">
-                  <h3 class="service-card__title">Care Home Support</h3>
-                  <span class="service-card__thumb">
-                    <img
-                      src="assets/images/services/serviceTwo.png"
-                      alt=""
-                      loading="lazy"
-                    />
-                  </span>
-                </div>
-                <span class="service-card__divider" aria-hidden="true"></span>
-
-                <p class="service-card__desc">
-                  Comprehensive companionship for residents in care settings.
-                </p>
-
-                <ul class="service-card__features">
-                  <li class="service-card__feature">
-                    <span class="service-card__feature-icon" aria-hidden="true">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      >
-                        <path d="M9 11l3 3L22 4" />
-                        <path
-                          d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
-                        />
-                      </svg>
-                    </span>
-                    <p class="service-card__feature-title">Visits</p>
-                    <p class="service-card__feature-desc">
-                      Consistent, reliable check-ins.
-                    </p>
-                  </li>
-                  <li class="service-card__feature">
-                    <span class="service-card__feature-icon" aria-hidden="true">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      >
-                        <path
-                          d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-                        />
-                      </svg>
-                    </span>
-                    <p class="service-card__feature-title">Liaison</p>
-                    <p class="service-card__feature-desc">
-                      Clear updates for families.
-                    </p>
-                  </li>
-                  <li class="service-card__feature">
-                    <span class="service-card__feature-icon" aria-hidden="true">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      >
-                        <path
-                          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21l7.78-7.55 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                        />
-                      </svg>
-                    </span>
-                    <p class="service-card__feature-title">Comfort</p>
-                    <p class="service-card__feature-desc">
-                      Wellbeing always prioritized.
-                    </p>
-                  </li>
-                </ul>
-
-                <div class="service-card__highlight">
-                  <span class="service-card__highlight-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path
-                        d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4z"
-                      />
-                    </svg>
-                  </span>
-                  <span>
-                    <strong>Guided, dependable support.</strong>
-                    Wherever care is needed.
-                  </span>
-                </div>
-
                 <a
-                  href="services.html#care-home-support"
+                  href="services.html#home-care-support"
                   class="service-card__link"
                 >
-                  Learn more
+                  Learn more<span class="visually-hidden">
+                    about Home Care Support</span
+                  >
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -731,11 +888,12 @@
               </div>
             </li>
 
-            <!-- Dementia Care -->
-            <li class="service-card service-card--orange">
+            <!-- Companionship & Respite Care (was Palliative Care's olive slot) —
+       promoted from bullet items into its own full service -->
+            <li class="service-card service-card--olive">
               <div class="service-card__media">
                 <img
-                  src="assets/images/services/serviceThree.png"
+                  src="assets/images/services/serviceFour.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -753,14 +911,16 @@
                     <circle cx="12" cy="12" r="9" />
                     <path d="M12 7v5l3 3" />
                   </svg>
-                  Specialized Support
+                  Guided Support
                 </span>
 
                 <div class="service-card__title-row">
-                  <h3 class="service-card__title">Dementia Care</h3>
+                  <h3 class="service-card__title">
+                    Companionship &amp; Respite Care
+                  </h3>
                   <span class="service-card__thumb">
                     <img
-                      src="assets/images/services/serviceThree.png"
+                      src="assets/images/services/serviceFour.webp"
                       alt=""
                       loading="lazy"
                     />
@@ -769,46 +929,11 @@
                 <span class="service-card__divider" aria-hidden="true"></span>
 
                 <p class="service-card__desc">
-                  Patient, structured support designed around familiarity and
-                  comfort.
+                  Friendly companionship and short-term relief support—so family
+                  caregivers can rest, too.
                 </p>
 
                 <ul class="service-card__features">
-                  <li class="service-card__feature">
-                    <span class="service-card__feature-icon" aria-hidden="true">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      >
-                        <rect x="3" y="4" width="18" height="16" rx="2" />
-                        <path d="M3 10h18" />
-                      </svg>
-                    </span>
-                    <p class="service-card__feature-title">Routine</p>
-                    <p class="service-card__feature-desc">
-                      A predictable, calm rhythm.
-                    </p>
-                  </li>
-                  <li class="service-card__feature">
-                    <span class="service-card__feature-icon" aria-hidden="true">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      >
-                        <path
-                          d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22z"
-                        />
-                      </svg>
-                    </span>
-                    <p class="service-card__feature-title">Safety</p>
-                    <p class="service-card__feature-desc">
-                      A secure, familiar space.
-                    </p>
-                  </li>
                   <li class="service-card__feature">
                     <span class="service-card__feature-icon" aria-hidden="true">
                       <svg
@@ -821,121 +946,9 @@
                         <circle cx="9" cy="7" r="4" />
                       </svg>
                     </span>
-                    <p class="service-card__feature-title">Expertise</p>
+                    <p class="service-card__feature-title">Companionship</p>
                     <p class="service-card__feature-desc">
-                      Trained, patient caregivers.
-                    </p>
-                  </li>
-                </ul>
-
-                <div class="service-card__highlight">
-                  <span class="service-card__highlight-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <circle cx="12" cy="12" r="9" />
-                    </svg>
-                  </span>
-                  <span>
-                    <strong>Familiar, structured care.</strong>
-                    Comfort in every routine.
-                  </span>
-                </div>
-
-                <a
-                  href="services.html#dementia-care"
-                  class="service-card__link"
-                >
-                  Learn more
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </li>
-
-            <!-- Palliative Care -->
-            <li class="service-card service-card--olive">
-              <div class="service-card__media">
-                <img
-                  src="assets/images/services/serviceFour.png"
-                  alt=""
-                  loading="lazy"
-                />
-              </div>
-
-              <div class="service-card__content">
-                <span class="service-card__badge">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M11 21c-4-2.5-9-5.5-9-10.5A5.5 5.5 0 0 1 11 7a5.5 5.5 0 0 1 9 3.5C20 15.5 15 18.5 11 21z"
-                    />
-                  </svg>
-                  Comfort-Centered Care
-                </span>
-
-                <div class="service-card__title-row">
-                  <h3 class="service-card__title">Palliative Care</h3>
-                  <span class="service-card__thumb">
-                    <img
-                      src="assets/images/services/serviceFour.png"
-                      alt=""
-                      loading="lazy"
-                    />
-                  </span>
-                </div>
-                <span class="service-card__divider" aria-hidden="true"></span>
-
-                <p class="service-card__desc">
-                  Comfort-focused care that prioritizes dignity and quality of
-                  life.
-                </p>
-
-                <ul class="service-card__features">
-                  <li class="service-card__feature">
-                    <span class="service-card__feature-icon" aria-hidden="true">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      >
-                        <path
-                          d="M11 21c-4-2.5-9-5.5-9-10.5A5.5 5.5 0 0 1 11 7a5.5 5.5 0 0 1 9 3.5C20 15.5 15 18.5 11 21z"
-                        />
-                      </svg>
-                    </span>
-                    <p class="service-card__feature-title">Comfort</p>
-                    <p class="service-card__feature-desc">
-                      Pain and ease, prioritized.
-                    </p>
-                  </li>
-                  <li class="service-card__feature">
-                    <span class="service-card__feature-icon" aria-hidden="true">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      >
-                        <path d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
-                        <circle cx="9" cy="7" r="4" />
-                      </svg>
-                    </span>
-                    <p class="service-card__feature-title">Support</p>
-                    <p class="service-card__feature-desc">
-                      Emotional care for families too.
+                      Friendly, familiar faces.
                     </p>
                   </li>
                   <li class="service-card__feature">
@@ -947,12 +960,33 @@
                         stroke-width="1.5"
                       >
                         <circle cx="12" cy="12" r="9" />
-                        <path d="m9 12 2 2 4-4" />
+                        <path d="M12 7v5l3 3" />
                       </svg>
                     </span>
-                    <p class="service-card__feature-title">Dignity</p>
+                    <p class="service-card__feature-title">Respite Breaks</p>
                     <p class="service-card__feature-desc">
-                      Respect in every moment.
+                      Rest for family caregivers.
+                    </p>
+                  </li>
+                  <li class="service-card__feature">
+                    <span class="service-card__feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      >
+                        <path d="M9 11l3 3L22 4" />
+                        <path
+                          d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                        />
+                      </svg>
+                    </span>
+                    <p class="service-card__feature-title">
+                      Flexible Scheduling
+                    </p>
+                    <p class="service-card__feature-desc">
+                      Support that fits your week.
                     </p>
                   </li>
                 </ul>
@@ -961,21 +995,23 @@
                   <span class="service-card__highlight-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                       <path
-                        d="M11 21c-4-2.5-9-5.5-9-10.5A5.5 5.5 0 0 1 11 7a5.5 5.5 0 0 1 9 3.5C20 15.5 15 18.5 11 21z"
+                        d="M12 21s-6.7-4.35-9.3-8.1C.9 10.2 1.8 6.6 5 5.3c2-.8 4 .1 5 1.7 1-1.6 3-2.5 5-1.7 3.2 1.3 4.1 4.9 2.3 7.6C18.7 16.65 12 21 12 21z"
                       />
                     </svg>
                   </span>
                   <span>
-                    <strong>Comfort, above all.</strong>
-                    Dignity through every stage.
+                    <strong>Support for the whole family.</strong>
+                    Because caregivers need care too.
                   </span>
                 </div>
 
                 <a
-                  href="services.html#palliative-care"
+                  href="services.html#companionship-respite-care"
                   class="service-card__link"
                 >
-                  Learn more
+                  Learn more<span class="visually-hidden">
+                    about Companionship &amp; Respite Care</span
+                  >
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -1615,7 +1651,7 @@
 
           <div class="cta-band__actions">
             <a
-              href="https://wa.me/+2349087519481?text=Hello%20Tender%20Heart%20Care%20Solution"
+              href="https://wa.me/+2348071563080?text=Hello%20Tender%20Heart%20Care%20Solution"
               class="btn btn--outline"
               target="_blank"
               rel="noopener noreferrer"
@@ -1664,7 +1700,12 @@
               </p>
               <ul class="site-footer__socials" aria-label="Social media">
                 <li>
-                  <a href="#" aria-label="Facebook">
+                  <a
+                    href="https://www.facebook.com/share/1Azgd5DJYL/"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <svg
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -1677,7 +1718,12 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" aria-label="Instagram">
+                  <a
+                    href="https://www.instagram.com/tenderheartcaresolutions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -1716,7 +1762,7 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html#why-choose-us">Why Choose Us</a></li>
-                <li><a href="resources.html">Resources</a></li>
+                <!-- <li><a href="resources.html">Resources</a></li> -->
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>
             </nav>
@@ -1726,17 +1772,23 @@
                 Our Services
               </h3>
               <ul class="site-footer__list">
-                <li><a href="services.html#in-home-care">In-Home Care</a></li>
                 <li>
-                  <a href="services.html#care-home-support"
-                    >Care Home Support</a
+                  <a href="services.html#home-care-support"
+                    >Home Care Support</a
                   >
                 </li>
-                <li><a href="services.html#dementia-care">Dementia Care</a></li>
                 <li>
-                  <a href="services.html#palliative-care">Palliative Care</a>
+                  <a href="services.html#companionship-respite-care"
+                    >Companionship &amp; Respite Care</a
+                  >
                 </li>
-                <li><a href="services.html#respite-care">Respite Care</a></li>
+                <li><a href="services.html#elderly-care">Elderly Care</a></li>
+                <li>
+                  <a href="services.html#childcare-family-support"
+                    >Childcare &amp; Family Support</a
+                  >
+                </li>
+                <!-- <li><a href="services.html#respite-care">Respite Care</a></li>
                 <li><a href="services.html#companionship">Companionship</a></li>
                 <li>
                   <a href="services.html#medication-management"
@@ -1745,14 +1797,14 @@
                 </li>
                 <li>
                   <a href="services.html#meal-preparation">Meal Preparation</a>
-                </li>
+                </li> -->
               </ul>
             </nav>
 
             <div class="site-footer__col">
               <h3 class="site-footer__heading">Contact Us</h3>
               <ul class="site-footer__contact">
-                <li>
+                <!-- <li>
                   <svg
                     class="site-footer__contact-icon"
                     viewBox="0 0 24 24"
@@ -1768,7 +1820,7 @@
                     >12, Companion Way, Lekki Phase 1, Lagos State,
                     Nigeria</span
                   >
-                </li>
+                </li> -->
                 <li>
                   <svg
                     class="site-footer__contact-icon"
@@ -1783,8 +1835,8 @@
                     />
                   </svg>
                   <span>
-                    <a href="tel:+2349087519481">+234 908 751 9481</a><br />
-                    <a href="tel:+2347017489980">+234 701 748 9980</a>
+                    <a href="tel:+2348071563080">+234 807 156 3080</a><br />
+                    <a href="tel:+2349087519481">+234 908 751 9481</a>
                   </span>
                 </li>
                 <li>
